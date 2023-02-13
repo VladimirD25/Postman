@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "b941696a-571d-4128-8874-73145e8f1568",
+		"name": "HW_1_Web_services_Task_3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18287591"
+	},
+	"item": [
+		{
+			"name": "#1_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//проверка работы сервиса"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5031/",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5031",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "#1_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//проверка работы сервиса"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://23.88.52.139:5032/",
+					"protocol": "http",
+					"host": [
+						"23",
+						"88",
+						"52",
+						"139"
+					],
+					"port": "5032",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws1_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5031/jobs_count",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5031",
+					"path": [
+						"jobs_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws2_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://23.88.52.139:5032/get_jobs_count",
+					"protocol": "http",
+					"host": [
+						"23",
+						"88",
+						"52",
+						"139"
+					],
+					"port": "5032",
+					"path": [
+						"get_jobs_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws1_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5031/all_jobs",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5031",
+					"path": [
+						"all_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws1_all_jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5031/all_jobs",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5031",
+					"path": [
+						"all_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws1_3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firm_title\": \"DVO\",\r\n\"position_title\": \"QA Engineer\",\r\n\"skills\": [\"postman\", \"js\", \"client_server\", \"api_testing\"],\r\n\"description\": \"Good Job\",\r\n\"Job Posting\": \"Dec 06 2022\",\r\n\"Employee Status\":\"Full-time\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5031/add_job",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5031",
+					"path": [
+						"add_job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws2_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//2 сервис создает позицию \"Job Posting\" пустой."
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firm_title\": \"DVO\",\r\n\"position_title\": \"QA Engineer\",\r\n\"skills\": [\"postman\", \"js\", \"client_server\", \"api_testing\"],\r\n\"description\": \"Good Job\",\r\n\"Job Posting\": \"Dec 06 2022\",\r\n\"Employee Status\":\"Full-time\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://23.88.52.139:5032/add_job_item",
+					"protocol": "http",
+					"host": [
+						"23",
+						"88",
+						"52",
+						"139"
+					],
+					"port": "5032",
+					"path": [
+						"add_job_item"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
