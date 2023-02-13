@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "37332057-fe34-49f2-8c84-b3abb90f8399",
+		"name": "HW_1_Web_services_Task_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18287591"
+	},
+	"item": [
+		{
+			"name": "#1_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5011/",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5011",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "#1_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://23.88.52.139:5012/",
+					"protocol": "http",
+					"host": [
+						"23",
+						"88",
+						"52",
+						"139"
+					],
+					"port": "5012",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5011/user",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5011",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Сервер 3 возвращает ответ с пустым полем \"mobile\""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"padawan\",\r\n    \"spec\": \"QA\", \r\n    \"ex\": \"1\", \r\n    \"current_user\": {\"uid\": \"1\", \"uip:\": \"94.244.149.101\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://23.88.52.139:5012/users_team",
+					"protocol": "http",
+					"host": [
+						"23",
+						"88",
+						"52",
+						"139"
+					],
+					"port": "5012",
+					"path": [
+						"users_team"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
