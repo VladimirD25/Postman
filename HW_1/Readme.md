@@ -1,23 +1,24 @@
-HOME_WORK_1
+HW_1
 
 Создать запросы в Postman.
 
-Protocol: http  
-IP: 162.55.220.72  
-Port: 5005  
+Protocol: http
+IP: 162.55.220.72
+Port: 5005
 
-EP_1  
-Method: GET  
-EndPoint: /get_method  
-request url params:  
-name: str  
-age: int  
+EP_1
+Method: GET
+EndPoint: /get_method
+request url params: 
+ name: str
+ age: int
 
-response:  
-[  
-  “Str”,  
-  “Str”  
-  ]  
+response: 
+[
+    “Str”,
+    “Str”
+]
+
 ==================
 
 EP_2
@@ -134,4 +135,3 @@ response:
                      'u_age': age,
                      'u_salary_5_years': salary * 4.2}
           }
-
