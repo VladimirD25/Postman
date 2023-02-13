@@ -1,6 +1,6 @@
 # Postman
 
-Home_work_1
+HOME_WORK_1
 
 Создать запросы в Postman.
 
@@ -139,7 +139,8 @@ response:
           }
 
 
-Home_work_2
+
+HOME_WORK_2
 
 
 http://162.55.220.72:5005/first
