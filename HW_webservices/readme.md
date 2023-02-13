@@ -13,40 +13,49 @@ Task_1
      
 3. После получения запроса ws_1 отправляет запрос на ws_2  
    POST.  
-   Body: json {'type': 'padawan', 'spec': 'QA', 'ex': '1', 'current_user': {'uid': YOUR_ID, 'uip:': ‘YOUR_IP’}}  
+   Body: json {  
+               'type': 'padawan',  
+               'spec': 'QA',   
+               'ex': '1',   
+               'current_user': {  
+                                'uid': YOUR_ID,   
+                                'uip:': ‘YOUR_IP’  
+                                }  
+               }  
+     
+4. WS_2 принимает запрос от ws_1, дополняет полученную Json дополнительной информацией.  
+5. WS_2 отправляет ответ на ws_1 в виде  
+   {  
+   "user_divices_data": {  
+   "comp": {  
+   "model": "Macbook",  
+   "monitor_diagonal": 16,  
+   "ram": 32,  
+   "resolution": [  
+   "Liquid Retina XDR",  
+   "3456x2234"  
+   ],  
+   "ssd": 1000,  
+   "year": 2021  
+   },  
+   "mobile": {  
+   "cpu": "ARM, SnapDragon 840",  
+   "model": "Samsung a52",  
+   "os": "Android",  
+   "ram": 6  
+   }  
+   },  
+   "user_static_data": {  
+   "current_user": {  
+   "uid": 1,  
+   "uip:": "127.0.0.1"  
+   },  
+   "ex": "1",  
+   "spec": "QA",  
+   "type": "padawan"  
+   }  
+   }  
    
-4. WS_2 принимает запрос от ws_1, дополняет полученную Json дополнительной информацией.
-5. WS_2 отправляет ответ на ws_1 в виде
-   {
-   "user_divices_data": {
-   "comp": {
-   "model": "Macbook",
-   "monitor_diagonal": 16,
-   "ram": 32,
-   "resolution": [
-   "Liquid Retina XDR",
-   "3456x2234"
-   ],
-   "ssd": 1000,
-   "year": 2021
-   },
-   "mobile": {
-   "cpu": "ARM, SnapDragon 840",
-   "model": "Samsung a52",
-   "os": "Android",
-   "ram": 6
-   }
-   },
-   "user_static_data": {
-   "current_user": {
-   "uid": 1,
-   "uip:": "127.0.0.1"
-   },
-   "ex": "1",
-   "spec": "QA",
-   "type": "padawan"
-   }
-   }
 6. Ws_1 перенаправляет запрос клиенту
 
 Task_2
